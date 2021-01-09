@@ -13,7 +13,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<meta charset="UTF-8">
 		<meta name="robots" content="noindex">
-        <!-- META TAGS-->
+		<!-- META TAGS-->
+		<script>
+			function filter(cat) {
+				var productDivs = document.getElementsByClassName('product-container');
+				var className;
+				for (i = 0; i < productDivs.length; ++i) {
+					className = productDivs[i].className;
+					if (className.includes(cat)) {
+						productDivs[i].style.display = 'block';
+					}
+					else {
+						productDivs[i].style.display = 'none';
+					}
+				}
+			}
+		</script>
+		<script>
+			function showAll() {
+				var productDivs = document.getElementsByClassName('product-container');
+				for (i = 0; i < productDivs.length; ++i) {
+					productDivs[i].style.display = 'block';
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<header>
@@ -24,54 +47,84 @@
 					<a href="/about">About us</a>
 					<a href="/reviews">Reviews</a>
 				</nav>
-				<hr>
+			</div>
+			<hr>
+			<div class="centering-container filter-buttons">
+				<button class="filter-button" onclick="filter('cat1')">Category 1</button>
+				<button class="filter-button" onclick="filter('cat2')">Category 2</button>
+				<button class="filter-button" onclick="showAll()">Show All</button>
 			</div>
 		</header>
+		<div class="header-coverage">&nbsp;</div>
 		<div class="centering-container">
-			<div class="product-container">
-				<h3 class="product-title">PRODUCT TITLE</h3>
+			<div class="product-container cat1">
+				<h3 class="product-title">PRODUCT TITLE - 1</h3>
 				<div class="product-image-and-description">
-					<img class="product-image" src="https://via.placeholder.com/150x150?text=Product+Image">
+					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
 				<button class="product-order" type="submit">Order</button>
 			</div>
-			<div class="product-container">
-				<h3 class="product-title">PRODUCT TITLE</h3>
+			<div class="product-container cat1">
+				<h3 class="product-title">PRODUCT TITLE - 1</h3>
 				<div class="product-image-and-description">
-					<img class="product-image" src="https://via.placeholder.com/150x150?text=Product+Image">
+					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
 				<button class="product-order" type="submit">Order</button>
 			</div>
-			<div class="product-container">
-				<h3 class="product-title">PRODUCT TITLE</h3>
+			<div class="product-container cat2">
+				<h3 class="product-title">PRODUCT TITLE - 2</h3>
 				<div class="product-image-and-description">
-					<img class="product-image" src="https://via.placeholder.com/150x150?text=Product+Image">
+					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
 				<button class="product-order" type="submit">Order</button>
 			</div>
-			<div class="product-container">
-				<h3 class="product-title">PRODUCT TITLE</h3>
+			<div class="product-container cat2">
+				<h3 class="product-title">PRODUCT TITLE - 2</h3>
 				<div class="product-image-and-description">
-					<img class="product-image" src="https://via.placeholder.com/150x150?text=Product+Image">
+					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
 				<button class="product-order" type="submit">Order</button>
 			</div>
-			<div class="product-container">
-				<h3 class="product-title">PRODUCT TITLE</h3>
+			<div class="product-container cat2">
+				<h3 class="product-title">PRODUCT TITLE - 2</h3>
 				<div class="product-image-and-description">
-					<img class="product-image" src="https://via.placeholder.com/150x150?text=Product+Image">
+					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
 				<button class="product-order" type="submit">Order</button>
 			</div>
-			<div class="product-container">
-				<h3 class="product-title">PRODUCT TITLE</h3>
+			<div class="product-container cat1">
+				<h3 class="product-title">PRODUCT TITLE - 1</h3>
 				<div class="product-image-and-description">
-					<img class="product-image" src="https://via.placeholder.com/150x150?text=Product+Image">
+					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
+					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<button class="product-order" type="submit">Order</button>
+			</div>
+			<div class="product-container cat1">
+				<h3 class="product-title">PRODUCT TITLE - 1</h3>
+				<div class="product-image-and-description">
+					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
+					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<button class="product-order" type="submit">Order</button>
+			</div>
+			<div class="product-container cat2">
+				<h3 class="product-title">PRODUCT TITLE - 2</h3>
+				<div class="product-image-and-description">
+					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
+					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<button class="product-order" type="submit">Order</button>
+			</div>
+			<div class="product-container cat2">
+				<h3 class="product-title">PRODUCT TITLE - 2</h3>
+				<div class="product-image-and-description">
+					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
 				<button class="product-order" type="submit">Order</button>

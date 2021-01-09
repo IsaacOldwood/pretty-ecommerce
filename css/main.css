@@ -1,7 +1,22 @@
+/*
+    Black 141204
+    Off-White E3E3E3
+    Light Grey cccccc
+    Dark Green 262A10
+    Greeny Brown 54442B
+    Light Brown A9714B
+    Lighter Brown E8985E
+    Maroon 8E0045
+    Purple 770058
+    Dark Purple 600047
+*/
+
 body {
-    background-color: #E3E3E3;
-    color: black;
+    background-color: #8E0045;
+    color: #cccccc;
     font-family: Georgia, serif;
+    margin: 1px;
+    padding: 1px;
 }
 
 .centering-container {
@@ -10,19 +25,37 @@ body {
     text-align: center;
 }
 
+header {
+    background-color: #600047;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+div.header-coverage {
+    margin: 2.8em auto;
+    font-size: 1em;
+}
+
+h1 {
+    margin: 0em;
+}
+
 nav > a {
     color: inherit;
-    margin: auto 1.25em;
+    margin: auto 1em;
+    font-size: 1.2em;
 }
 
 hr {
     color: #a6a6a6;
+    width: 100%;
 }
 
 div.product-container {
     max-width: 90%;
     margin: 1em auto;
-    border: 1px solid #a6a6a6;
+    border: 2px solid #a6a6a6;
     clear: both;
 }
 
@@ -34,6 +67,18 @@ h3.product-title {
     font-size: 1em;
     margin: 0.1em auto 1em auto;
     text-decoration: underline;
+}
+
+div.filter-buttons {
+    margin: auto auto 0.25em auto;
+}
+
+button.filter-button {
+    font-size: 0.75em;
+    background-color: #8E0045;
+    color: #cccccc;
+    padding: 0.1em 0.75em;
+    margin: auto 0.75em;
 }
 
 img.product-image {
@@ -48,7 +93,10 @@ p.product-description {
 }
 
 button.product-order {
-    font-size: 1em;
+    font-size: 0.8em;
     margin: 0.5em auto;
+    background-color: #600047;
+    color: #cccccc;
+    width: 75%;
 }
 
