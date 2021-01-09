@@ -29,7 +29,8 @@ header {
     background-color: #600047;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 101%;
+    left: -1px;
 }
 
 div.header-coverage {
