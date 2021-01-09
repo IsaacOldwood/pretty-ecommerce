@@ -10,3 +10,45 @@ body {
     text-align: center;
 }
 
+nav > a {
+    color: inherit;
+    margin: auto 1.25em;
+}
+
+hr {
+    color: #a6a6a6;
+}
+
+div.product-container {
+    max-width: 90%;
+    margin: 1em auto;
+    border: 1px solid #a6a6a6;
+    clear: both;
+}
+
+div.product-image-and-description {
+    overflow: hidden;
+}
+
+h3.product-title {
+    font-size: 1em;
+    margin: 0.1em auto 1em auto;
+    text-decoration: underline;
+}
+
+img.product-image {
+    float: left;
+    margin: auto 0.75em;
+}
+
+p.product-description {
+    font-size: 0.8em;
+    text-align: left;
+    margin: 0em 0.25em auto auto;
+}
+
+button.product-order {
+    font-size: 1em;
+    margin: 0.5em auto;
+}
+
