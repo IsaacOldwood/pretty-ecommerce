@@ -89,6 +89,15 @@
 				}
 			}
 		</script>
+		<script>
+			function postcodeCheck(postcode) {
+				var URL = 'https://api.promaptools.com/service/uk/postcode-lat-lng/get/?postcode=PE29%202JD&key=17o8dysaCDrgv1c';
+				fetch(URL)
+				.then((resp) => resp.json())
+				.then(function(data) {
+				})
+			}
+		</script>
 	</head>
 	<body>
 		<header>
@@ -98,7 +107,7 @@
 					<a class="left" href="/">Home</a>
 					<a href="/">About us</a>
 					<a href="/">Reviews</a>
-					<button class="cart"><i class="fa fa-shopping-cart"></i><span class="cart-text">&nbsp;Cart</span></button>
+					<button class="cart" onclick="console.log(postcode2latlong('a'))"><i class="fa fa-shopping-cart"></i><span class="cart-text">&nbsp;Cart</span></button>
 				</nav>
 			</div>
 			<hr>
