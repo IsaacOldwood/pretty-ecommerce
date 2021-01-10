@@ -8,6 +8,10 @@
     Dark Purple 600047
 */
 
+html {
+    padding: env(safe-area-inset);
+}
+
 body {
     background-color: #8E0045;
     color: #cccccc;
