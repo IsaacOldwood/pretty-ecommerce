@@ -137,3 +137,19 @@ button.product-order {
         clear: both;
     }
 }
+
+@media screen and (min-width: 550px) and (max-width: 850px) {
+    .flex-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
+    }
+
+    div.product-container {
+        margin: 1em 3em;
+        border: 2px solid #a6a6a6;
+        width: 37%;
+        clear: both;
+    }
+}
