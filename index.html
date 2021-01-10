@@ -91,7 +91,17 @@
 					if (confirm(confirmMessage)) {
 						document.cookie = "postcodeConfirmed=true"
 					}
+					else {
+						return 0;
+					}
 				}
+				var cartCounters = document.getElementsByClassName('cartCounter');
+				for (i = 0; i < cartCounters.length; ++i) {
+					cartNumber = parseInt(cartCounters[i].textContent);
+					++cartNumber;
+					cartCounters[i].textContent = cartNumber;
+				}
+				
 			}
 		</script>
 		<script>
@@ -112,7 +122,11 @@
 					<a class="left" href="/">Home</a>
 					<a href="/">About us</a>
 					<a href="/">Reviews</a>
-					<button class="cart" onclick=""><i class="fa fa-shopping-cart"></i><span class="cart-text">&nbsp;Cart</span></button>
+					<button class="cart" onclick="">
+						<i class="fa fa-shopping-cart"></i>
+						<span class='cartBadge cartCounter'>0</span>
+						<span class="cart-text">&nbsp;Cart&nbsp;(<span class='cart-text cartCounter'>0</span>)</span>
+					</button>
 				</nav>
 			</div>
 			<hr>
@@ -131,7 +145,7 @@
 					<img class="product-image" src="productImages/product1(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat3">
 				<h3 class="product-title">PRODUCT 2 (Category 3)</h3>
@@ -139,7 +153,7 @@
 					<img class="product-image" src="productImages/product2(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat2">
 				<h3 class="product-title">PRODUCT 3 (Category 2)</h3>
@@ -147,7 +161,7 @@
 					<img class="product-image" src="productImages/product3(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat2">
 				<h3 class="product-title">PRODUCT 4 (Category 2)</h3>
@@ -155,7 +169,7 @@
 					<img class="product-image" src="productImages/product4(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat2">
 				<h3 class="product-title">PRODUCT 5 (Category 1)</h3>
@@ -163,7 +177,7 @@
 					<img class="product-image" src="productImages/product5(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat1">
 				<h3 class="product-title">PRODUCT 6 (Category 1)</h3>
@@ -171,7 +185,7 @@
 					<img class="product-image" src="productImages/product6(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat1">
 				<h3 class="product-title">PRODUCT 7 (Category 1)</h3>
@@ -179,7 +193,7 @@
 					<img class="product-image" src="productImages/product7(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat2">
 				<h3 class="product-title">PRODUCT 8 (Category 2)</h3>
@@ -187,7 +201,7 @@
 					<img class="product-image" src="productImages/product8(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat2">
 				<h3 class="product-title">PRODUCT 9 (Category 2)</h3>
@@ -195,7 +209,7 @@
 					<img class="product-image" src="productImages/product9(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat1">
 				<h3 class="product-title">PRODUCT 10 (Category 1)</h3>
@@ -203,7 +217,7 @@
 					<img class="product-image" src="productImages/product10(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat2">
 				<h3 class="product-title">PRODUCT 11 (Category 2)</h3>
@@ -211,7 +225,7 @@
 					<img class="product-image" src="productImages/product11(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat1">
 				<h3 class="product-title">PRODUCT 12 (Category 1)</h3>
@@ -219,7 +233,7 @@
 					<img class="product-image" src="productImages/product12(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat1">
 				<h3 class="product-title">PRODUCT 13 (Category 1)</h3>
@@ -227,7 +241,7 @@
 					<img class="product-image" loading="lazy" src="https://via.placeholder.com/125x125?text=Product+Image+1">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat3">
 				<h3 class="product-title">PRODUCT 14 (Category 3)</h3>
@@ -235,7 +249,7 @@
 					<img class="product-image" loading="lazy" src="https://via.placeholder.com/125x125?text=Product+Image+13">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat2">
 				<h3 class="product-title">PRODUCT 15 (Category 2)</h3>
@@ -243,7 +257,7 @@
 					<img class="product-image" loading="lazy" src="https://via.placeholder.com/125x125?text=Product+Image+14">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat3">
 				<h3 class="product-title">PRODUCT 16 (Category 3)</h3>
@@ -251,7 +265,7 @@
 					<img class="product-image" loading="lazy" src="https://via.placeholder.com/125x125?text=Product+Image+15">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit" onclick="ATC()">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 		</div>
 		<footer>
