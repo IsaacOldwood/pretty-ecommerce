@@ -34,6 +34,18 @@ header {
     left: -1px;
 }
 
+footer {
+    background-color: #600047;
+    position: fixed;
+    bottom: 0;
+    width: 101%;
+    left: -1px;
+}
+
+footer > div.centering-container {
+    margin: 0.25em auto 0.35em auto;
+}
+
 div.header-coverage {
     margin: 2.8em auto;
     font-size: 1em;
@@ -68,14 +80,25 @@ span.cart-text {
     display: none;
 }
 
-nav > a {
+header nav > a {
     color: inherit;
     margin: auto 0.75em;
     font-size: 1.2em;
 }
 
-nav > a.left {
+header nav > a.left {
     margin: auto 1em auto 1.75em;
+}
+
+footer nav > a {
+    color: inherit;
+    margin: auto 0.5em;
+    text-decoration: none;
+    border:1px solid #a6a6a6;
+    padding: 5px;
+    width: 1em;
+    height: auto;
+    font-size: 5em;
 }
 
 hr {
@@ -155,9 +178,35 @@ button.product-order {
     width: 75%;
 }
 
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: inherit;
+}
+
+.fa-instagram {
+    background-color: #C13584;
+    color: inherit;
+}
+
+
 @media screen and (min-width: 550px) {
     span.cart-text {
         display: inline;
+    }
+
+    footer nav > a {
+        color: inherit;
+        margin: auto 0.5em;
+        text-decoration: none;
+        border:1px solid #a6a6a6;
+        padding: 5px;
+        width: 2em;
+        height: auto;
+        font-size: 5em;
     }
 }
 
@@ -175,6 +224,7 @@ button.product-order {
         width: 37%;
         clear: both;
     }
+    
 }
 
 @media screen and (min-width: 1100px) {
