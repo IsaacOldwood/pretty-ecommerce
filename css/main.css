@@ -127,7 +127,7 @@ hr {
 }
 
 div.product-container {
-    max-width: 90%;
+    width: 90%;
     margin: 1em auto;
     border: 2px solid #a6a6a6;
     background-color: #A30078;
@@ -177,12 +177,30 @@ div.filter-buttons {
 img.product-image {
     float: left;
     margin: auto 0.75em;
+    height: 125px;
+    width: 125px;
+}
+
+img.product-list {
+    margin: auto 0.25em auto 0.75em;
 }
 
 p.product-description {
     font-size: 0.8em;
     text-align: left;
     margin: 0em 0.25em auto auto;
+}
+
+ul.product-list {
+    overflow: hidden;
+    text-align: left;
+    padding-inline-start: 1em;
+    margin: 0px;
+    font-size: 0.9em;
+}
+
+ul.product-list > li {
+    margin: 0.5em auto;
 }
 
 button.product-order {
