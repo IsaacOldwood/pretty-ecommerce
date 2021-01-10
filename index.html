@@ -5,7 +5,8 @@
 		<!-- link to main stylesheet -->
 		<link href="css/main.css" type="text/css" rel="stylesheet" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <!-- link to icon -->
+		<!-- link to icon -->
+		<!-- link to JS-->
 		<!-- META TAGS-->
         <meta name = "keywords" content = "Grazie, Graze Box, Produce, Local, Small Business, Huntingdon" />
         <meta name = "description" content = "GoGrazie is a local business producing and delivering the finest Graze Boxes to Huntingdon and the surrounding area" />
@@ -61,6 +62,33 @@
 				}
 			}
 		</script>
+		<script>
+			   function ReadCookie(cookieName) {
+				  var allcookies = document.cookie;
+				  
+				  // Get all the cookies pairs in an array
+				  cookiearray = allcookies.split(';');
+				  
+				  // Now take key value pair out of this array
+				  for(var i=0; i<cookiearray.length; i++) {
+					name = cookiearray[i].split('=')[0];
+					value = cookiearray[i].split('=')[1];
+					if (name == cookieName) {
+						return value;
+					}
+				  }
+			   }
+		 </script> 
+		<script>
+			function ATC() {
+				if (!ReadCookie('postcodeConfirmed')) {
+					var confirmMessage = 'Caution: Currently we can only deliver within a 20 mile radius\n\nPlease confirm you are within 20 miles of PE29 3PJ before ordering.';
+					if (confirm(confirmMessage)) {
+						document.cookie = "postcodeConfirmed=true"
+					}
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<header>
@@ -88,7 +116,7 @@
 					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Order</button>
 			</div>
 			<div class="product-container cat1">
 				<h3 class="product-title">PRODUCT TITLE - 1</h3>
@@ -96,7 +124,7 @@
 					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Order</button>
 			</div>
 			<div class="product-container cat2">
 				<h3 class="product-title">PRODUCT TITLE - 2</h3>
@@ -104,7 +132,7 @@
 					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Order</button>
 			</div>
 			<div class="product-container cat2">
 				<h3 class="product-title">PRODUCT TITLE - 2</h3>
@@ -112,7 +140,7 @@
 					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Order</button>
 			</div>
 			<div class="product-container cat2">
 				<h3 class="product-title">PRODUCT TITLE - 2</h3>
@@ -120,7 +148,7 @@
 					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Order</button>
 			</div>
 			<div class="product-container cat1">
 				<h3 class="product-title">PRODUCT TITLE - 1</h3>
@@ -128,7 +156,7 @@
 					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Order</button>
 			</div>
 			<div class="product-container cat1">
 				<h3 class="product-title">PRODUCT TITLE - 1</h3>
@@ -136,7 +164,7 @@
 					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Order</button>
 			</div>
 			<div class="product-container cat2">
 				<h3 class="product-title">PRODUCT TITLE - 2</h3>
@@ -144,7 +172,7 @@
 					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Order</button>
 			</div>
 			<div class="product-container cat2">
 				<h3 class="product-title">PRODUCT TITLE - 2</h3>
@@ -152,7 +180,7 @@
 					<img class="product-image" src="https://via.placeholder.com/125x125?text=Product+Image">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				<button class="product-order" type="submit">Order</button>
+				<button class="product-order" type="submit" onclick="ATC()">Order</button>
 			</div>
 		</div>
 	</body>
