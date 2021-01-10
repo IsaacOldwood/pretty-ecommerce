@@ -17,14 +17,25 @@
 		<script>
 			function filter(cat) {
 				var productDivs = document.getElementsByClassName('product-container');
+				var filterButtons = document.getElementsByClassName('filter-button');
 				var className;
 				for (i = 0; i < productDivs.length; ++i) {
 					className = productDivs[i].className;
 					if (className.includes(cat)) {
-						productDivs[i].style.display = 'block';
+						productDivs[i].style.display = 'inline-block';
 					}
 					else {
 						productDivs[i].style.display = 'none';
+					}
+				}
+
+				for (i = 0; i < filterButtons.length; ++i) {
+					className = filterButtons[i].className;
+					if (className.includes(cat)) {
+						filterButtons[i].style.backgroundColor = '#8E0045';
+					}
+					else {
+						filterButtons[i].style.backgroundColor = 'inherit';
 					}
 				}
 			}
@@ -32,8 +43,20 @@
 		<script>
 			function showAll() {
 				var productDivs = document.getElementsByClassName('product-container');
+				var filterButtons = document.getElementsByClassName('filter-button');
+				var className;
 				for (i = 0; i < productDivs.length; ++i) {
-					productDivs[i].style.display = 'block';
+					productDivs[i].style.display = 'inline-block';
+				}
+
+				for (i = 0; i < filterButtons.length; ++i) {
+					className = filterButtons[i].className;
+					if (className.includes('all')) {
+						filterButtons[i].style.backgroundColor = '#8E0045';
+					}
+					else {
+						filterButtons[i].style.backgroundColor = 'inherit';
+					}
 				}
 			}
 		</script>
@@ -50,9 +73,9 @@
 			</div>
 			<hr>
 			<div class="centering-container filter-buttons">
-				<button class="filter-button" onclick="filter('cat1')">Category 1</button>
-				<button class="filter-button" onclick="filter('cat2')">Category 2</button>
-				<button class="filter-button" onclick="showAll()">Show All</button>
+				<button class="filter-button cat1" onclick="filter('cat1')">Category 1</button>
+				<button class="filter-button cat2" onclick="filter('cat2')">Category 2</button>
+				<button class="filter-button all" onclick="showAll()">Show All</button>
 			</div>
 		</header>
 		<div class="header-coverage">&nbsp;</div>

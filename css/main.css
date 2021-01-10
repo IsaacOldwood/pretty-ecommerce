@@ -2,11 +2,8 @@
     Black 141204
     Off-White E3E3E3
     Light Grey cccccc
-    Dark Green 262A10
-    Greeny Brown 54442B
-    Light Brown A9714B
-    Lighter Brown E8985E
-    Maroon 8E0045
+    Grey a6a6a6
+    Light Purple A30078
     Purple 770058
     Dark Purple 600047
 */
@@ -62,6 +59,8 @@ div.product-container {
     max-width: 90%;
     margin: 1em auto;
     border: 2px solid #a6a6a6;
+    background-color: #A30078;
+    color: #E3E3E3;
     clear: both;
     box-shadow: 3px 3px 5px 6px rgba(0,0,0,0.4);
 }
@@ -80,13 +79,29 @@ div.filter-buttons {
     margin: auto auto 0.25em auto;
 }
 
-button.filter-button {
+.filter-button {
+	background-color:inherit;
+	border-radius: 1em;
+	border:1px solid #a6a6a6;
+	display:inline-block;
+	cursor:pointer;
+	color:inherit;
+	font-family:Georgia;
+	text-decoration:none;
     font-size: 0.75em;
-    background-color: #8E0045;
     color: #cccccc;
     padding: 0.1em 0.75em;
     margin: auto 0.75em;
 }
+
+.filter-button:hover {
+    background-color:#8E0045 !important;
+}
+
+.filter-button.all {
+    background-color:#8E0045;
+}
+    
 
 img.product-image {
     float: left;
