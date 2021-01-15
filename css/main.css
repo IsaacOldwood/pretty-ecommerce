@@ -10,9 +10,17 @@ html {
 }
 
 body {
-    background-color: #8E0045;
-    color: #cccccc;
-    font-family: Georgia, serif;
+    background-color:#AEADA8;
+    background:
+    radial-gradient(black 3px, transparent 4px),
+    radial-gradient(black 3px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px), #fff;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    color: #000000;
+    font-family: 'Playfair Display', serif;
     margin: 1px;
     padding: 1px;
 }
@@ -24,7 +32,7 @@ body {
 }
 
 header {
-    background-color: #600047;
+    background-color: #ECA498;
     position: fixed;
     top: 0;
     width: 101%;
@@ -32,7 +40,8 @@ header {
 }
 
 footer {
-    background-color: #600047;
+    background-color: #ECA498;
+    color: #e3e3e3;
     position: fixed;
     bottom: 0;
     width: 101%;
@@ -44,7 +53,7 @@ footer > div.centering-container {
 }
 
 div.header-coverage {
-    margin: 2.8em auto;
+    margin: 2.9em auto;
     font-size: 1em;
 }
 
@@ -57,20 +66,20 @@ h1 {
 button.cart {
 	background-color:inherit;
 	border-radius: 0.1em;
-	border:1px solid #a6a6a6;
+	border:1px solid #000000;
 	display:inline-block;
 	cursor:pointer;
 	color:inherit;
 	font-family:Georgia;
 	text-decoration:none;
     font-size: 1em;
-    color: #cccccc;
+    color: #000000;
     padding: 0.25em 0.25em;
     margin: auto 0em auto 1em;
 }
 
 button.cart:hover {
-    background-color:#8E0045 !important;
+    background-color:#ECA498 !important;
 }
 
 span.cart-text {
@@ -106,7 +115,7 @@ footer nav > a {
     color: inherit;
     margin: auto 0.5em;
     text-decoration: none;
-    border:1px solid #a6a6a6;
+    border:1px solid #000000;
     padding: 5px;
     width: 1em;
     height: auto;
@@ -114,7 +123,7 @@ footer nav > a {
 }
 
 hr {
-    color: #a6a6a6;
+    color: inherit;
     width: 100%;
 }
 
@@ -126,9 +135,9 @@ hr {
 div.product-container {
     width: 90%;
     margin: 1em auto;
-    border: 2px solid #a6a6a6;
-    background-color: #A30078;
-    color: #E3E3E3;
+    border: 2px solid #000000;
+    background-color: #ECA498;
+    color: #000000;
     clear: both;
     box-shadow: 3px 3px 5px 6px rgba(0,0,0,0.4);
 }
@@ -150,24 +159,24 @@ div.filter-buttons {
 .filter-button {
 	background-color:inherit;
 	border-radius: 1em;
-	border:1px solid #a6a6a6;
+	border:1px solid #000000;
 	display:inline-block;
 	cursor:pointer;
 	color:inherit;
 	font-family:Georgia;
 	text-decoration:none;
     font-size: 0.75em;
-    color: #cccccc;
-    padding: 0.1em 0.75em;
-    margin: auto 0.75em;
+    color: #000000;
+    padding: 0.1em 0.6em;
+    margin: auto 0.25em;
 }
 
 .filter-button:hover {
-    background-color:#8E0045 !important;
+    background-color:#AEADA8 !important;
 }
 
 .filter-button.all {
-    background-color:#8E0045;
+    background-color:#AEADA8;
 }
     
 
@@ -203,8 +212,8 @@ ul.product-list > li {
 button.product-order {
     font-size: 0.8em;
     margin: 0.5em auto;
-    background-color: #600047;
-    color: #cccccc;
+    background-color: #AEADA8;
+    color: #000000;
     width: 75%;
 }
 
@@ -219,6 +228,11 @@ button.product-order {
 
 .fa-instagram {
     background-color: #C13584;
+    color: inherit;
+}
+
+.fa-envelope {
+    background-color: #AEADA8;
     color: inherit;
 }
 
@@ -242,6 +256,12 @@ button.product-order {
         height: auto;
         font-size: 5em;
     }
+
+    .filter-button {
+        font-size: 0.8em;
+        padding: 0.1em 0.8em;
+        margin: auto 0.8em;
+    }
 }
 
 @media screen and (min-width: 775px) and (max-width: 1100px) {
@@ -254,7 +274,7 @@ button.product-order {
 
     div.product-container {
         margin: 1em 3em;
-        border: 2px solid #a6a6a6;
+        border: 2px solid #000000;
         width: 37%;
         clear: both;
     }
@@ -271,8 +291,14 @@ button.product-order {
 
     div.product-container {
         margin: 1em 3em;
-        border: 2px solid #a6a6a6;
+        border: 2px solid #000000;
         width: 20%;
         clear: both;
+    }
+
+    .filter-button {
+        font-size: 1em;
+        padding: 0.1em 0.9em;
+        margin: auto 1em;
     }
 }
