@@ -5,7 +5,7 @@
     Silver AEADA8
 */
 
-@font-face { font-family: PlayfairDisplay; src: url('css/Playfair_Display/static/PlayfairDisplay-Regular.ttf'); }
+@font-face { font-family: PlayfairDisplay; src: url('Playfair_Display/static/PlayfairDisplay-Regular.ttf'); }
 
 html {
     padding: env(safe-area-inset);
