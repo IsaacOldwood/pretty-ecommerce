@@ -50,6 +50,11 @@ div.header-coverage {
     font-size: 1em;
 }
 
+div.footer-coverage {
+    margin: 0.75em auto;
+    font-size: 1em;
+}
+
 h1 {
     font-size: 2.25em;
     text-align: center;
@@ -69,6 +74,7 @@ button.cart {
     color: #000000;
     padding: 0.25em 0.25em;
     margin: auto 0em auto 1em;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 }
 
 button.cart:hover {
@@ -162,6 +168,7 @@ div.filter-buttons {
     color: #000000;
     padding: 0.1em 0.6em;
     margin: auto 0.25em;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 }
 
 .filter-button:hover {
@@ -193,7 +200,7 @@ p.product-description {
 ul.product-list {
     overflow: hidden;
     text-align: left;
-    padding-inline-start: 1em;
+    padding-inline-start: 1.5em;
     margin: 0px;
     font-size: 0.9em;
 }
@@ -206,8 +213,17 @@ button.product-order {
     font-size: 0.8em;
     margin: 0.5em auto;
     background-color: #AEADA8;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    background: radial-gradient(circle, rgba(174,173,168,1) 91%, rgba(145,145,143,1) 100%);
     color: #000000;
     width: 75%;
+}
+
+button.product-order:hover {
+    background-color: #AEADA8;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.35);
+    color: #000000;
+    transform: translateY(-2px);
 }
 
 .fa:hover {
@@ -217,16 +233,19 @@ button.product-order {
 .fa-facebook {
   background: #3B5998;
   color: inherit;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 }
 
 .fa-instagram {
     background-color: #C13584;
     color: inherit;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 }
 
 .fa-envelope {
     background-color: #AEADA8;
     color: inherit;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 }
 
 
@@ -243,7 +262,7 @@ button.product-order {
         color: inherit;
         margin: auto 0.5em;
         text-decoration: none;
-        border:1px solid #a6a6a6;
+        border:1px solid #000000;
         padding: 5px;
         width: 2em;
         height: auto;
@@ -254,6 +273,13 @@ button.product-order {
         font-size: 0.8em;
         padding: 0.1em 0.8em;
         margin: auto 0.8em;
+    }
+
+    button.product-order:hover {
+        background-color: #ffffff;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+        color: #000000;
+        transform: translateY(-2px);
     }
 }
 
