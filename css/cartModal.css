@@ -1,0 +1,75 @@
+/*
+    Black 000000
+    Off-White E3E3E3
+    Pastel Pink ECA498
+    Silver AEADA8
+*/
+
+.cartModal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.cartModal-content {
+    background-color: #fefefe;
+    margin: 35% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 90%; /* Could be more or less, depending on screen size */
+}
+
+h3.cart {
+    margin: 0px;
+    text-decoration: underline;
+    padding: 0.15em 0px 0.25em 0px;
+    background-color: #ECA498;
+}
+
+h3.cart-details {
+    margin: 10px 0px 0px 0px;
+    text-decoration: underline;
+    padding: 0.15em 0px 0.25em 0px;
+    background-color: #ECA498;
+}
+
+table.cart {
+    margin: auto;
+    padding: auto;
+    text-align: left;
+    width: 90%;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-collapse: collapse;
+}
+
+tr.cart-total {
+    border-top: solid thin;
+    
+}
+
+tr.cart-total > td {
+    font-weight: bold;
+}
+
+span.form-input {
+    display: block;
+    margin: 0.5em auto;
+}
+
+button.cart-order {
+    font-size: 1.25em;
+    margin: 0.5em auto;
+    background-color: #AEADA8;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    background: radial-gradient(circle, rgba(174,173,168,1) 91%, rgba(145,145,143,1) 100%);
+    color: #000000;
+    width: 75%;
+}

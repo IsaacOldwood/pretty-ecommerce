@@ -4,6 +4,7 @@
 		<title>Home | GoGrazie</title>
 		<!-- link to stylesheets -->
 		<link href="css/main.css" type="text/css" rel="stylesheet" />
+		<link href="css/cartModal.css" type="text/css" rel="stylesheet" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!-- link to icon -->
@@ -117,6 +118,23 @@
 				})
 			}
 		</script>
+		<script>
+			function showCart() {
+				// Get the modal
+				var cartModal = document.getElementById("cartModal");
+
+				cartModal.style.display = "block";
+
+			}
+
+			window.onclick = function(event) {
+			  if (event.target == document.getElementById("cartModal")) {
+			    document.getElementById("cartModal").style.display = "none";
+			  }
+			}
+			
+
+		</script>
 	</head>
 	<body>
 		<header>
@@ -126,7 +144,7 @@
 					<a class="left" href="/">Home</a>
 					<a href="/">About us</a>
 					<a href="/">Reviews</a>
-					<button class="cart" onclick="">
+					<button class="cart" onclick="showCart()">
 						<i class="fa fa-shopping-cart"></i>
 						<span class='cartBadge cartCounter'>0</span>
 						<span class="cart-text">&nbsp;Cart&nbsp;(<span class='cart-text cartCounter'>0</span>)</span>
@@ -142,6 +160,59 @@
 				<button class="filter-button all" onclick="showAll()">Show All</button>
 			</div>
 		</header>
+		<div class="centering-container cartModal" id="cartModal">
+			<div class="cartModal-content">
+				<div class="cart-summary">
+					<h3 class="cart">Your Cart</h3>
+					<table class="cart">
+						<tr>
+						  <th>Product</th>
+						  <th>Price</th>
+						</tr>
+						<tr>
+						  <td>Valentines Platter for 2</td>
+						  <td>£50</td>
+						</tr>
+						<tr>
+							<td>Cart Product 2</td>
+							<td>£15</td>
+						</tr>
+						<tr class="cart-total">
+							<td>Total:</td>
+							<td>£65</td>
+						</tr>
+					</table>
+					<form class="cart-method">
+						<input type="radio" id="collection" name="gender" value="collection" checked>
+						<label for="collection">Collection</label>
+						<input type="radio" id="delivery" name="gender" value="delivery">
+						<label for="delivery">Delivery</label>
+					</form>
+				</div>
+				<div class="cart-details-collection">
+					<h3 class="cart-details">Your Details</h3>
+					<form class="cart-details">
+						<span class="form-input">
+							<label for="firstName">First Name:</label>
+							<input id="firstName" placeholder="First Name" name="firstName" size="10" required>
+						</span>
+						<span class="form-input">
+							<label for="lastName">Last Name:</label>
+							<input id="lastName" placeholder="Last Name" name="lastName" size="10" required>
+						</span>
+						<span class="form-input">
+							<label for="email">Email:</label>
+							<input id="email" placeholder="Email Address" name="email" size="20" required>
+						</span>
+						<span class="form-input">
+							<label for="dietary">No Dietary Requirements</label>
+							<input type="checkbox" id="dietary" name="dietary" checked>
+						</span>
+						<button class="cart-order" type="submit">Order Now!</button>
+					</form>
+				</div>
+			</div>
+		</div>
 		<div class="header-coverage">&nbsp;</div>
 		<div class="centering-container flex-container">
 			<div class="product-container cat2">
