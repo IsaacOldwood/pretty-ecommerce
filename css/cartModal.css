@@ -26,10 +26,24 @@
     width: 90%; /* Could be more or less, depending on screen size */
 }
 
-h3.cart {
+div.cart-title {
     margin: 0px;
+    background-color: #ECA498;
+}
+
+h3.cart-title {
+    margin: 0px 2.5em 0em 6em;
     text-decoration: underline;
     padding: 0.15em 0px 0.25em 0px;
+    background-color: #ECA498;
+    display: inline-block;
+}
+
+button.cart-title {
+    margin: 0px;
+    font-size: 1em;
+    padding: 0.15em;
+    color: inherit;
     background-color: #ECA498;
 }
 
@@ -80,5 +94,9 @@ button.cart-order {
         margin: 7% auto; /* 15% from the top and centered */
         border: 1px solid #888;
         width: 50%; /* Could be more or less, depending on screen size */
+    }
+
+    button.cart-title {
+        display: none;
     }
 }

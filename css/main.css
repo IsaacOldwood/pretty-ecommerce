@@ -223,13 +223,6 @@ button.product-order {
     width: 75%;
 }
 
-button.product-order:hover {
-    background-color: #AEADA8;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.35);
-    color: #000000;
-    transform: translateY(-2px);
-}
-
 .fa:hover {
     opacity: 0.7;
 }
@@ -285,6 +278,7 @@ button.product-order:hover {
         color: #000000;
         transform: translateY(-2px);
     }
+
 }
 
 @media screen and (min-width: 775px) and (max-width: 1100px) {

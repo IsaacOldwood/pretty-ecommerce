@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Home | GoGrazie</title>
+		<title>Home | Pretty E-Commerce</title>
 		<!-- link to stylesheets -->
 		<link href="css/main.css" type="text/css" rel="stylesheet" />
 		<link href="css/cartModal.css" type="text/css" rel="stylesheet" />
@@ -18,13 +18,12 @@
 			observer.observe();
 		</script>
 		<!-- META TAGS-->
-        <meta name = "keywords" content = "Grazie, Graze Box, Produce, Local, Small Business, Huntingdon" />
-        <meta name = "description" content = "GoGrazie is a local business producing and delivering the finest Graze Boxes to Huntingdon and the surrounding area" />
+        <meta name = "keywords" content = "E-Commerce, Produce, Local, Small Business, Huntingdon" />
+        <meta name = "description" content = "E-Commerce is a local business producing and delivering the finest products to Huntingdon and the surrounding area" />
         <meta name = "revised" content = "IsaacOldwood, 9/1/2021" />
         <meta name = "author" content = "Isaac Oldwood" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 		<meta charset="UTF-8">
-		<meta name="robots" content="noindex">
 		<!-- META TAGS-->
 		<script>
 			function filter(cat) {
@@ -127,6 +126,14 @@
 
 			}
 
+			function hideCart() {
+				// Get the modal
+				var cartModal = document.getElementById("cartModal");
+
+				cartModal.style.display = "none";
+
+			}
+
 			window.onclick = function(event) {
 			  if (event.target == document.getElementById("cartModal")) {
 			    document.getElementById("cartModal").style.display = "none";
@@ -139,7 +146,7 @@
 	<body>
 		<header>
 			<div class="centering-container">
-				<h1>GoGrazie</h1>
+				<h1>E-Commerce</h1>
 				<nav>
 					<a class="left" href="/">Home</a>
 					<a href="/">About us</a>
@@ -153,24 +160,28 @@
 			</div>
 			<hr>
 			<div class="centering-container filter-buttons">
-				<button class="filter-button cat1" onclick="filter('cat1')">Individual</button>
-				<button class="filter-button cat2" onclick="filter('cat2')">Standard</button>
-				<button class="filter-button cat3" onclick="filter('cat3')">Large</button>
-				<button class="filter-button cat4" onclick="filter('cat4')">Table/Event</button>
+				<button class="filter-button cat1" onclick="filter('cat1')">Category 1</button>
+				<button class="filter-button cat2" onclick="filter('cat2')">Category 2</button>
+				<button class="filter-button cat3" onclick="filter('cat3')">Category 3</button>
 				<button class="filter-button all" onclick="showAll()">Show All</button>
 			</div>
 		</header>
 		<div class="centering-container cartModal" id="cartModal">
 			<div class="cartModal-content">
 				<div class="cart-summary">
-					<h3 class="cart">Your Cart</h3>
+					<div class="cart-title">
+						<h3 class="cart-title">Your Cart</h3>
+						<span class="cart-title">
+							<button class="cart-title" onclick="hideCart()">Close</button>
+						</span>
+					</div>
 					<table class="cart">
 						<tr>
 						  <th>Product</th>
 						  <th>Price</th>
 						</tr>
 						<tr>
-						  <td>Valentines Platter for 2</td>
+						  <td>Cart Product 1</td>
 						  <td>£50</td>
 						</tr>
 						<tr>
@@ -204,10 +215,6 @@
 							<label for="email">Email:</label>
 							<input id="email" placeholder="Email Address" name="email" size="20" required>
 						</span>
-						<span class="form-input">
-							<label for="dietary">No Dietary Requirements</label>
-							<input type="checkbox" id="dietary" name="dietary" checked>
-						</span>
 						<button class="cart-order" type="submit">Order Now!</button>
 					</form>
 				</div>
@@ -216,20 +223,20 @@
 		<div class="header-coverage">&nbsp;</div>
 		<div class="centering-container flex-container">
 			<div class="product-container cat2">
-				<h3 class="product-title">Valentines Platter for 2 (£50)</h3>
+				<h3 class="product-title">Valentines Product</h3>
 				<div class="product-image-and-description">
 					<img class="product-image product-list" src="productImages/two-hearts(734x734).png">
 					<ul class="product-list">
-						<li>Circle wooden board for serving</li>
-						<li>Antipasti mix</li>
-						<li>Treats</li>
+						<li>Item 1</li>
+						<li>Item 2</li>
+						<li>Item 3</li>
 						<li>A bottle of fizz</li>
 					</ul>
 				</div>
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat3">
-				<h3 class="product-title">PRODUCT Platter for 3</h3>
+				<h3 class="product-title">PRODUCT Category 3</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" src="productImages/product2(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -237,7 +244,7 @@
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat2">
-				<h3 class="product-title">PRODUCT Platter for 2</h3>
+				<h3 class="product-title">PRODUCT Category 2</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" src="productImages/product3(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -245,7 +252,7 @@
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat2">
-				<h3 class="product-title">PRODUCT Platter for 2</h3>
+				<h3 class="product-title">PRODUCT Category 2</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" src="productImages/product4(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -253,7 +260,7 @@
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat2">
-				<h3 class="product-title">PRODUCT Platter for 2</h3>
+				<h3 class="product-title">PRODUCT Category 2</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" src="productImages/product5(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -261,7 +268,7 @@
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat1">
-				<h3 class="product-title">PRODUCT Platter for 1</h3>
+				<h3 class="product-title">PRODUCT Category 1</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" src="productImages/product6(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -269,7 +276,7 @@
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat1">
-				<h3 class="product-title">PRODUCT Platter for 1</h3>
+				<h3 class="product-title">PRODUCT Category 1</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" src="productImages/product7(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -277,7 +284,7 @@
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat2">
-				<h3 class="product-title">PRODUCT Platter for 2</h3>
+				<h3 class="product-title">PRODUCT Category 2</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" src="productImages/product8(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -285,7 +292,7 @@
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat2">
-				<h3 class="product-title">PRODUCT Platter for 2</h3>
+				<h3 class="product-title">PRODUCT Category 2</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" src="productImages/product9(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -293,7 +300,7 @@
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat1">
-				<h3 class="product-title">PRODUCT Platter for 1</h3>
+				<h3 class="product-title">PRODUCT Category 1</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" src="productImages/product10(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -301,7 +308,7 @@
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat2">
-				<h3 class="product-title">PRODUCT Platter for 2</h3>
+				<h3 class="product-title">PRODUCT Category 2</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" src="productImages/product11(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -309,7 +316,7 @@
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat1">
-				<h3 class="product-title">PRODUCT Platter for 1</h3>
+				<h3 class="product-title">PRODUCT Category 1</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" src="productImages/product12(125x125).png">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -317,7 +324,7 @@
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat1">
-				<h3 class="product-title">PRODUCT Platter for 1</h3>
+				<h3 class="product-title">PRODUCT Category 1</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" loading="lazy" src="https://via.placeholder.com/125x125?text=Product+Image+1">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -325,7 +332,7 @@
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat3">
-				<h3 class="product-title">PRODUCT Platter for 4+</h3>
+				<h3 class="product-title">PRODUCT Category 3</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" loading="lazy" src="https://via.placeholder.com/125x125?text=Product+Image+13">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -333,7 +340,7 @@
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat2">
-				<h3 class="product-title">PRODUCT Platter for 2</h3>
+				<h3 class="product-title">PRODUCT Category 2</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" loading="lazy" src="https://via.placeholder.com/125x125?text=Product+Image+14">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -341,7 +348,7 @@
 				<button class="product-order" type="submit" onclick="ATC()">Add To Cart</button>
 			</div>
 			<div class="product-container cat3">
-				<h3 class="product-title">PRODUCT Platter for 8</h3>
+				<h3 class="product-title">PRODUCT Category 3</h3>
 				<div class="product-image-and-description">
 					<img class="product-image" loading="lazy" src="https://via.placeholder.com/125x125?text=Product+Image+15">
 					<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -353,9 +360,9 @@
 		<footer>
 			<div class="centering-container">
 				<nav>
-					<a class="fa fa-envelope fa-lg" href="mailto:go_grazie@outlook.com"></a>
-					<a class="fa fa-facebook fa-lg" href="https://www.facebook.com/GoGrazie1/"></a>
-					<a class="fa fa-instagram fa-lg" href="https://www.instagram.com/gograzie/"></a>
+					<a class="fa fa-envelope fa-lg" href="mailto:isaac.oldwood+website@gmail.com"></a>
+					<a class="fa fa-facebook fa-lg" href="https://www.facebook.com/"></a>
+					<a class="fa fa-instagram fa-lg" href="https://www.instagram.com/"></a>
 				</nav>
 			</div>
 		</footer>
